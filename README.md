@@ -1,21 +1,31 @@
+# Nouwe Bridge
+
+Nouwe Bridge is a cross-chain bridging solution leveraging Open Intents and Hyperlane to enable seamless interoperability between blockchain networks.
+
 > [!NOTE]
-> This UI is a modified version of the Hyperlane's Warp Route UI
+> This UI is a modified version of Hyperlane's Warp Route UI.
 
-# Hyperlane Warp Route UI Template
+## Overview
 
-This repo contains an example web interface for interchain tokens built with [Hyperlane Warp Route](https://docs.hyperlane.xyz/docs/reference/applications/warp-routes). Warp is a framework to permisionlessly bridge tokens to any chain.
+Nouwe Bridge is built using the [Hyperlane Warp Route](https://docs.hyperlane.xyz/docs/reference/applications/warp-routes) framework, which allows permissionless token bridging across different blockchain ecosystems.
 
 ## Architecture
 
-This app is built with Next & React, Wagmi, RainbowKit, and the Hyperlane SDK.
+The project is developed using the following technologies:
 
-- Constants that you may want to change are in `./src/consts/`, see the following Customization section for details.
-- The index page is located at `./src/pages/index.tsx`
-- The primary features are implemented in `./src/features/`
+- **Next.js & React** – Modern frontend framework for building a fast and scalable UI.
+- **Wagmi & RainbowKit** – Wallet connection and interaction with blockchain networks.
+- **Hyperlane SDK** – Enables interchain messaging and cross-chain bridging.
+
+Key file locations:
+
+- Configuration constants are in `./src/consts/`.
+- The main page is in `./src/pages/index.tsx`.
+- Core functionality is implemented in `./src/features/`.
 
 ## Customization
 
-See [CUSTOMIZE.md](./CUSTOMIZE.md) for details about adjusting the tokens and branding of this app.
+To adjust tokens, branding, or other settings, refer to [CUSTOMIZE.md](./CUSTOMIZE.md).
 
 ## Development
 
@@ -23,7 +33,7 @@ See [CUSTOMIZE.md](./CUSTOMIZE.md) for details about adjusting the tokens and br
 
 #### Configure
 
-You need a `projectId` from the WalletConnect Cloud to run the Hyperlane Warp Route UI. Sign up to [WalletConnect Cloud](https://cloud.walletconnect.com) to create a new project.
+You will need a `projectId` from the WalletConnect Cloud to use the Nouwe Bridge UI. Sign up at [WalletConnect Cloud](https://cloud.walletconnect.com) to obtain a project ID.
 
 #### Build
 
@@ -31,18 +41,19 @@ You need a `projectId` from the WalletConnect Cloud to run the Hyperlane Warp Ro
 # Install dependencies
 yarn
 
-# Build Next project
+# Build the Next.js project
 yarn build
 ```
 
 ### Run
 
-You can add `.env.local` file next to `.env.example` where you set `projectId` copied from WalletConnect Cloud.
+Create a `.env.local` file based on `.env.example` and set `projectId` from WalletConnect Cloud.
 
 ```sh
-# Start the Next dev server
+# Start the development server
 yarn dev
-# Or with a custom projectId
+
+# Or specify a custom projectId
 NEXT_PUBLIC_WALLET_CONNECT_ID=<projectId> yarn dev
 ```
 
@@ -66,14 +77,14 @@ yarn prettier
 ### Clean / Reset
 
 ```sh
-# Delete build artifacts to start fresh 
+# Delete build artifacts
 yarn clean
 ```
 
 ## Deployment
 
-The easiest hosting solution for this Next.JS app is to create a project on Vercel.
+The recommended hosting solution for Nouwe Bridge is Vercel. Deploying on Vercel ensures scalability, performance, and ease of management.
 
-## Learn more
+## Learn More
 
-For more information, see the [Hyperlane documentation](https://docs.hyperlane.xyz/docs/reference/applications/warp-routes).
+For further details, check out the [Hyperlane documentation](https://docs.hyperlane.xyz/docs/reference/applications/warp-routes).
