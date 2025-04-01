@@ -249,7 +249,7 @@ export const warpRouteConfigs: WarpCoreConfig = {
         origin: ['arbitrumsepolia', 'basesepolia', 'cappucinotestnet', 'sepolia', 'holesky', 'optimismsepolia', 'sonicblaze'].join(
           NETWORK_SEPARATOR,
         ),
-        destination: ['basesepolia', 'basesepolia', 'cappucinotestnet', 'sepolia', 'holesky', 'optimismsepolia', 'sonicblaze'].join(NETWORK_SEPARATOR),
+        destination: ['arbitrumsepolia', 'basesepolia', 'cappucinotestnet', 'sepolia', 'holesky', 'optimismsepolia', 'sonicblaze'].join(NETWORK_SEPARATOR),
         addressOrDenom: zeroAddress,
       }
     ],
